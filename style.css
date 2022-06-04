@@ -1,0 +1,89 @@
+body {
+  background-color: #dedede;
+  height: 100vh;
+}
+
+.newsCards {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 450px;
+  max-height: 400px;
+
+  min-width: 400px;
+  min-height: 400px;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 20px;
+  margin-bottom: 20px;
+
+  background-color: #fff;
+  border: 1px solid #bebebe;
+  border-radius: 10px;
+  box-shadow: 3px 5px #bebebe;
+
+}
+
+.card .img-load {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-load img {
+  max-height: 200px;
+}
+
+@keyframes loader-bg {
+  from {
+    background-color: #cecece;
+  }
+
+  to {
+    background-color: #e9e6e6;
+  }
+}
+
+.load {
+  background-color: #cecece;
+  width: 100%;
+  border-radius: 3px;
+  animation: loader-bg 1s linear infinite alternate;
+}
+
+.title-load {
+  height: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.desc {
+  line-height: 1.5;
+}
+
+.desc-load {
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+.card .desc-load:first-child {
+  width: calc(100% - 5%);
+}
+
+.card .desc-load:nth-child(even) {
+  width: calc(100% - 20%);
+}
+
+.card .desc-load:last-child {
+  width: calc(100% - 15%);
+}
